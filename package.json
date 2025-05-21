@@ -2,9 +2,8 @@
   "name": "weavermail",
   "version": "1.0.0",
   "description": "Website",
-  "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
+    "build": "NODE_ENV=production npx @11ty/eleventy",
     "start": "rm -rf dist && npx @11ty/eleventy --serve --port=3000"
   },
   "repository": {
@@ -12,7 +11,7 @@
     "url": "git+https://github.com/patrickweaver/weavermail.git"
   },
   "engines": {
-    "node": "14.x"
+    "node": "22.x"
   },
   "author": "Patrick Weaver",
   "license": "MIT",
@@ -21,6 +20,8 @@
   },
   "homepage": "https://github.com/patrickweaver/weavermail#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^3.1.0",
+    "@11ty/eleventy-plugin-handlebars": "^1.0.0",
+    "handlebars": "^4.7.8"
   }
 }

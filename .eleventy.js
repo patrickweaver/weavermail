@@ -1,4 +1,12 @@
+const handlebarsPlugin = require("@11ty/eleventy-plugin-handlebars");
+const handlebars = require("handlebars");
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(handlebarsPlugin, {
+    // Override the `ejs` library instance
+    eleventyLibraryOverride: handlebars,
+  });
+
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
     strict_filters: true,
